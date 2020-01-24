@@ -14,9 +14,13 @@ take = input("Type 'b' to subtract 1: ")
 # The counting
 if add == "a":
     addresult = int(RandomNumber) + 1
+else:
+    addresult = int(RandomNumber)
 
 if take == "b":
     finalresult = int(addresult) - 1
+else:
+    finalresult = int(addresult)
 
 # Result print
 print("The result is:", finalresult)
