@@ -17,3 +17,9 @@ file.close()
 file = open(joe,'w')
 file.write("i am going to say the ")
 file.close()
+
+h = input("Do you need help with OS module? Type '1' if yes: ")
+if h == "1":
+    help(os)
+else:
+    print("Ok!")
