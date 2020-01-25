@@ -1,0 +1,5 @@
+a = input("Enter base: ")
+b = input("Enter power: ")
+x = int(a) ** int(b)
+print("Loading...")
+print("Answer:",x)
