@@ -8,4 +8,4 @@ if win == "baba":
     print("     ")
     print("Congratulation")
 else:
-    print("Baba is not you!  Press 'Run' to restart."
+    print("Baba is not you!  Press 'Run' to restart.")
