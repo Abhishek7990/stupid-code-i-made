@@ -1,5 +1,15 @@
-x = input("What is your os module rating? ")
-if x == "AAAAAAAAAA":
-    print("same bro")
-else:
-    print("Ok!")
+import os
+
+print(os.getcwd())
+
+joe = "joe.txt"
+file = open(joe,'r')
+text = file.read()
+print(text)
+file.close()
+file = open(joe,'w')
+file.write(text + "g word")
+file.close()
+file = open(joe,'r')
+text = file.read()
+print(text)
