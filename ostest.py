@@ -1,6 +1,7 @@
 import os
 
-print(os.getcwd())
+theword = input("What letter word would you like to say? ")
+print("...")
 
 joe = "joe.txt"
 file = open(joe,'r')
@@ -8,7 +9,7 @@ text = file.read()
 print(text)
 file.close()
 file = open(joe,'w')
-file.write(text + "g word")
+file.write(text + theword)
 file.close()
 file = open(joe,'r')
 text = file.read()
