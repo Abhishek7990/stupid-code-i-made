@@ -14,3 +14,4 @@ elif question == "yes":
     print("test")
 
 # i am tired and going to finish this tomorrow
+# ok so that was a lie and i am going to finish this someday since ive got a new project
