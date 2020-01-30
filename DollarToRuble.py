@@ -8,10 +8,17 @@ way = input("Dollar to Ruble or backwards? (to R; to D): ")
 # The money counting:
 if way == "to R":
     amount = input("\nInput the amount of dollars: ")
-    answer = float(amount) * 62
+    if float(amount) >= 1:
+        answer = float(amount) * 62
+    else:
+        print("Incorrect!")
+    
 elif way == "to D":
     amount = input("\nInput the amount of rubles: ")
-    answer = float(amount) / 62
+    if float(amount) >= 1:
+        answer = float(amount) / 62
+    else:
+        print("Incorrect")
 else:
     print("\nIncorrect money type!")
 
