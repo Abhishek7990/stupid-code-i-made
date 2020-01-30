@@ -1,23 +1,37 @@
+/* i stole this pls dont tell anybody kthx */
+ 
 #include <stdio.h>
-
-int a;
-int b;
-char action;
-int yeet;
-
-int main() {
-printf("First number: ");
-gets ( a );
-
-printf("Action (add): ");
-gets ( action );
-
-printf("Second number: ");
-gets ( b );
-
-if (action == "add") {
-yeet = a + b;
-}
-
-printf("Output: %d", yeet);
+ 
+int main()
+{
+	char Operator;
+	float num1, num2, result = 0;
+	
+	printf("\n Please Enter an Operator (+, -, *, /)  :  ");
+  	scanf("%c", &Operator);
+  	
+	printf("\n Please Enter the Values for two Operands: num1 and num2  :  ");
+  	scanf("%f%f", &num1, &num2);
+  	
+  	switch(Operator)
+  	{
+  		case '+':
+  			result = num1 + num2;
+  			break;
+  		case '-':
+  			result = num1 - num2;
+  			break;  			
+  		case '*':
+  			result = num1 * num2;
+  			break;
+  		case '/':
+  			result = num1 / num2;
+  			break;
+		default:
+			printf("\n You have enetered an Invalid Operator ");				    			
+	}
+  
+	printf("\n The result of %.2f %c %.2f  = %.2f", num1, Operator, num2, result);
+	
+  	return 0;
 }
