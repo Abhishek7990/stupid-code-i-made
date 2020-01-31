@@ -1,5 +1,5 @@
 def baba():
-    print("baba is you \n is \nwin")
+    print("\nbaba is you \n is \nwin")
 
 print("how to win:")
 win = input("Type 'baba' to win: ")
