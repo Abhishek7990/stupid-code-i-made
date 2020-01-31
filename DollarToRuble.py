@@ -29,7 +29,7 @@ else:
 
 # The result:
 try:
-    print("\nThe amount of money is:", answer)
+    print(f"\nThe amount of money is: {answer}")
 except NameError:
     print("\nTo restart the stonk exchange - run the code again.")
 time.sleep(0.6)
