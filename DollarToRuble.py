@@ -2,11 +2,11 @@ import time
 
 # Introduction:
 print("Welcome to the stonk exchange!\n")
-time.sleep(2)
-way = input("Dollar to Ruble or backwards? (to R; to D): ")
+time.sleep(1)
+way = input("Dollar to Ruble or backwards? (D-R; R-D): ")
 
 # The money counting:
-if way == "to R":
+if way == "D-R":
     try:
         amount = float(input("\nInput the amount of dollars: "))
         if amount < 0.01:
@@ -15,9 +15,9 @@ if way == "to R":
             print("\nNot a Number or is null!")
     else:
         answer = amount * 62
-elif way == "to D":
+elif way == "R-D":
     try:
-        amount = input("\nInput the amount of rubles: ")
+        amount = float(input("\nInput the amount of rubles: "))
         if amount < 0.01:
             raise ValueError
     except ValueError:
@@ -25,13 +25,13 @@ elif way == "to D":
     else:
         answer = amount / 62
 else:
-    print("\nIncorrect money type!")
+    print("\nError! Please, refer to the brackets.")
 
 # The result:
 try:
-    print("\nThe amount of money is: %f" % answer)
+    print("\nThe amount of money is:", answer)
 except NameError:
     print("\nTo restart the stonk exchange - run the code again.")
-time.sleep(0.4)
+time.sleep(0.6)
 print("\nThanks for using Stonk Exchange! Cya!")
 time.sleep(0.5)
