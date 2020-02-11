@@ -12,6 +12,6 @@ elif action == "multiply":
     equals = int(a) * int(b)
 elif action == "expotent":
     equals = int(a) ** int(b)
-elif action is not "add" or "subtract" or "divide" or "multiply" or "expotent":
+elif action != "add" or "subtract" or "divide" or "multiply" or "expotent":
     print("Incorrect action!")
 print("Your output:", equals)
