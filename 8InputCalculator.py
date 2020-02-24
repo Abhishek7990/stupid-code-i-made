@@ -7,8 +7,11 @@ except ValueError:
     print("Number Not Detected!")
     sys.exit()
 
-def looper():
-    loop = input("Would you like to input another number? (Y/N) ")
+if x in ["*","/","**","+","-"]:
+    ans = None
+    exec(f"ans = a {x} b")
+    print(f"Answer: {ans}")
+    loop = input("Would you like to input another number? (Y/N) ").upper()
     if loop == "Y":
         print('Okay!')
     elif loop == "N":
@@ -17,60 +20,26 @@ def looper():
     else:
         print("Answer not executed: counting as N...")
         sys.exit()
-
-if x == "+":
-    ans = a + b
-    print(f"Answer: {ans}")
-    looper()
-elif x == "-":
-    ans = a - b
-    print(f"Answer: {ans}")
-    looper()
-elif x == "*":
-    ans = a * b
-    print(f"Answer: {ans}")
-    looper()
-elif x == "/":
-    ans = a / b
-    print(f"Answer: {ans}")
-    looper()
-elif x == "**":
-    ans = a ** b
-    print(f"Answer: {ans}")
-    looper()
 else:
     print("I did not get the equation right! Restarting...")
     sys.exit()
 
-if looper() == "Y":
+if loop == "Y":
     while True:
         y = input("Enter an equation: ")
         c = int(input("Enter another number: "))
-
-        if y == "+":
-            ans = ans + c
-            print(f"Answer: {ans}")
-        elif y == "-":
-            ans = ans - c
-            print(f"Answer: {ans}")
-        elif y == "*":
-            ans = ans * c
-            print(f"Answer: {ans}")
-        elif y == "/":
-            ans = ans / c
-            (f"Answer: {ans}")
-        elif y == "**":
-            ans = ans ** c
+        if y in ["*","/","**","+","-"]:
+            exec(f"ans = ans {y} c")
             print(f"Answer: {ans}")
         else:
             print("I did not get the equation right! Restarting...")
             sys.exit()
-        breaker = input("Would you like to end the program? (Y/N) ")
+        breaker = input("Another number? (Y/N) ").upper()
         if breaker == "Y":
             print("Okay!")
-            break
         elif breaker == "N":
             print("Okay!")
+            break
         else:
             print("Not an Answer! Ending the program...")
             break
