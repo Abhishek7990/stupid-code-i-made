@@ -11,7 +11,6 @@ def looper():
     loop = input("Would you like to input another number? (Y/N) ")
     if loop == "Y":
         print('Okay!')
-        return loop
     elif loop == "N":
         print("Okay!")
         sys.exit()
@@ -66,7 +65,7 @@ if looper() == "Y":
         else:
             print("I did not get the equation right! Restarting...")
             sys.exit()
-        breaker = input("Would you like to end the program? (Y/N)")
+        breaker = input("Would you like to end the program? (Y/N) ")
         if breaker == "Y":
             print("Okay!")
             break
