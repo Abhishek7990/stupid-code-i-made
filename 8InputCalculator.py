@@ -1,17 +1,77 @@
-a = input("First number: ")
-x = input("Action (add/subtract/divide/multiply): ")
-b = input("Second number: ")
-question = input("Any more numbers? (yes/no)")
+import sys
+try:
+    a = int(input("Enter the first number: "))
+    x = input("Enter the equation type (+ | - | * | / | **): ")
+    b = int(input("Enter the second number: "))
+except ValueError:
+    print("Number Not Detected!")
+    sys.exit()
 
-if x == "add":
-    y = "+"
+def looper():
+    loop = input("Would you like to input another number? (Y/N) ")
+    if loop == "Y":
+        print('Okay!')
+        return loop
+    elif loop == "N":
+        print("Okay!")
+        sys.exit()
+    else:
+        print("Answer not executed: counting as N...")
+        sys.exit()
 
-geralt = int(a) + int(b)
+if x == "+":
+    ans = a + b
+    print(f"Answer: {ans}")
+    looper()
+elif x == "-":
+    ans = a - b
+    print(f"Answer: {ans}")
+    looper()
+elif x == "*":
+    ans = a * b
+    print(f"Answer: {ans}")
+    looper()
+elif x == "/":
+    ans = a / b
+    print(f"Answer: {ans}")
+    looper()
+elif x == "**":
+    ans = a ** b
+    print(f"Answer: {ans}")
+    looper()
+else:
+    print("I did not get the equation right! Restarting...")
+    sys.exit()
 
-if question == "no":
-    print("Output:", geralt) 
-elif question == "yes":   
-    print("test")
+if looper() == "Y":
+    while True:
+        y = input("Enter an equation: ")
+        c = int(input("Enter another number: "))
 
-# i am tired and going to finish this tomorrow
-# ok so that was a lie and i am going to finish this someday since ive got a new project
+        if y == "+":
+            ans = ans + c
+            print(f"Answer: {ans}")
+        elif y == "-":
+            ans = ans - c
+            print(f"Answer: {ans}")
+        elif y == "*":
+            ans = ans * c
+            print(f"Answer: {ans}")
+        elif y == "/":
+            ans = ans / c
+            (f"Answer: {ans}")
+        elif y == "**":
+            ans = ans ** c
+            print(f"Answer: {ans}")
+        else:
+            print("I did not get the equation right! Restarting...")
+            sys.exit()
+        breaker = input("Would you like to end the program? (Y/N)")
+        if breaker == "Y":
+            print("Okay!")
+            break
+        elif breaker == "N":
+            print("Okay!")
+        else:
+            print("Not an Answer! Ending the program...")
+            break
